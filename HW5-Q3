@@ -8,7 +8,7 @@ class Q3
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		
-		int arr[] 	= new int[1000000];
+		int arr[] = new int[1000000];
 		int pos = 520000; 
 		int neg = 480000;
 		
