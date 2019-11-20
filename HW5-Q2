@@ -8,21 +8,20 @@ class Q2
 	public static void main (String[] args) throws java.lang.Exception
 	{
 	  
-    Random rand = new Random();
-	    int initialPos = 0;
+        Random rand = new Random();
+	    
 	    int arr[] = {-1, 1};
-	    int sum = 0;
+	    int count = 0;
 	    for(int i = 0 ; i < 50; i++) {
-	        int count = 0;
-	        for(int j = 0; j < 40000; j++) {
-	            int finalPos = initialPos + arr[rand.nextInt(2)];
-	            if(finalPos > 0) count++;
-	            initialPos = finalPos;
+	        int initialPos = 0;
+	        for(int j = 0; j < 160000; j++) {
+	            initialPos = initialPos + arr[rand.nextInt(2)];
+	            if(initialPos == 0) count++;
 	        }
-	        sum += count;
 	    }
-		int avg = sum/50;
+		int avg = count/50;
 		System.out.println(avg);
 	}
 }
+
 
